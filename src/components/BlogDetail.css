@@ -1,0 +1,9 @@
+.blog_detail_container {
+  width: 60%;
+  margin: auto;
+}
+
+.blog_detail_img {
+  height: 500px;
+  width: 100%;
+}

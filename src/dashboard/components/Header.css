@@ -1,0 +1,18 @@
+.dashboard_header {
+  box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  height: 60px;
+  /* background-color: seagreen; */
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.header_container {
+  margin-left: 40px;
+  /* width: 95%;
+  margin: auto; */
+}

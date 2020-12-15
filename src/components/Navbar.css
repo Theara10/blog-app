@@ -1,0 +1,68 @@
+.nav {
+  box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
+  /* background-color: #273c75; */
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  z-index: 100;
+  margin: auto;
+  top: 0;
+  height: 60px;
+}
+
+.navBar_middle {
+  display: flex;
+}
+.navBar_middle_option {
+  padding-left: 30px;
+}
+
+.navBar_right {
+  display: flex;
+}
+
+.navbar_middle_option > p {
+  margin: 0;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+.navBar_right_option {
+  padding-left: 20px;
+}
+.navBar_right_option > {
+  padding-left: 20px;
+}
+
+.login {
+  color: white;
+  margin: 0;
+  padding: 5px 10px;
+}
+
+.contact {
+  background-color: black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  list-style: none;
+}
+
+.link_style {
+  text-decoration: none;
+  color: black;
+}
+.contact_link_style {
+  text-decoration: none;
+  color: white;
+}

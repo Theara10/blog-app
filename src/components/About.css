@@ -1,0 +1,14 @@
+.about_container {
+  width: 60%;
+  margin: auto;
+  display: flex;
+}
+
+.about_image > img {
+  width: 300px;
+  height: 300px;
+}
+
+.about_description {
+  margin-right: 10px;
+}
