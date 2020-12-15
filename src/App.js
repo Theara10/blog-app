@@ -11,7 +11,7 @@ import Dashboard from "./dashboard/Dashboard";
 import { ApolloProvider, InMemoryCache, ApolloClient } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "http://localhost:8000/",
+  uri: "http://blog-api.thearathoughts.com/",
   cache: new InMemoryCache(),
 });
 
