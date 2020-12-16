@@ -5,6 +5,7 @@ import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
 
 import { gql } from "apollo-boost";
 import { Query } from "@apollo/react-components";
+import { useQuery } from "@apollo/client";
 
 const GET_BLOG = gql`
   {
