@@ -17,7 +17,7 @@ export default function Blog() {
   const { data, loading } = useQuery(GET_BLOG);
   if (loading) return <div>Loading...</div>;
   return (
-    <div>
+    <div className="blog_container">
       {data.listBlog.map((x) => {
         return (
           <div className="blog_display">
