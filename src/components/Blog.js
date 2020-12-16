@@ -15,7 +15,7 @@ const GET_BLOG = gql`
 export default function Blog() {
   return (
     <div className="blog_container">
-      <Query query={GET_BLOG}>
+      {/* <Query query={GET_BLOG}>
         {({ data, loading }) => {
           if (loading || data === undefined) return <div>data loading...</div>;
           return (
@@ -51,7 +51,7 @@ export default function Blog() {
             </div>
           );
         }}
-      </Query>
+      </Query> */}
     </div>
   );
 }
