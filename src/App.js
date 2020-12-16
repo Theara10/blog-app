@@ -8,33 +8,24 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Dashboard from "./dashboard/Dashboard";
 
-import { ApolloProvider, InMemoryCache, ApolloClient } from "@apollo/client";
-
-const client = new ApolloClient({
-  uri: "http://blog-api.thearathoughts.com/",
-  cache: new InMemoryCache(),
-});
-
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <Router>
-        <div className="App">
-          <Navbar />
+    <Router>
+      <div className="App">
+        <Navbar />
 
-          <div className="app_body">
-            <Switch>
-              <Route path="/" component={Blog} exact />
-              <Route path="/blog" component={Blog} />
-              <Route path="/blog-detail" component={BlogDetail} />
-              <Route path="/about" component={About} />
-              <Route path="/contact" component={Contact} />
-            </Switch>
-          </div>
-          {/* <Dashboard /> */}
+        <div className="app_body">
+          <Switch>
+            <Route path="/" component={Blog} exact />
+            <Route path="/blog" component={Blog} />
+            <Route path="/blog-detail" component={BlogDetail} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
         </div>
-      </Router>
-    </ApolloProvider>
+        {/* <Dashboard /> */}
+      </div>
+    </Router>
   );
 }
 
