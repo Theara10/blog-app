@@ -10,6 +10,15 @@
 
 .blog_img {
   padding: 5px;
+  object-fit: cover;
+  height: auto;
+  width: auto;
+}
+
+.image {
+  height: 150px;
+  width: 150px;
+  object-fit: cover
 }
 
 .blog_text {
@@ -29,6 +38,14 @@
 .blog_sub_title {
   font-size: 16px;
   margin-top: 5px;
+  -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    /* line-height: 28px; */
+    font-size: 16px;
+    white-space: pre-wrap;
 }
 .blog_date {
   font-size: 12px;

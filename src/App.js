@@ -11,21 +11,21 @@ import Dashboard from "./dashboard/Dashboard";
 function App() {
   return (
     <Router>
-      {/* <div className="App">
+      <div className="App">
         <Navbar />
 
         <div className="app_body">
           <Switch>
             <Route path="/" component={Blog} exact />
             <Route path="/blog" component={Blog} />
-            <Route path="/blog-detail" component={BlogDetail} />
+            <Route path="/blog-detail/:id" component={BlogDetail} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
           </Switch>
         </div>
         
-      </div> */}
-      <Dashboard />
+      </div>
+      {/* <Dashboard /> */}
     </Router>
   );
 }

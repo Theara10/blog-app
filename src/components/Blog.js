@@ -22,8 +22,8 @@ export default function Blog() {
         return (
           <div className="blog_display">
             <div className="blog_img">
-              <Link to="/blog-detail">
-                <img src={x.image} width="150" height="150" />
+              <Link to={"/blog-detail/"+x.id}>
+                <img src={x.image} className="image"/>
               </Link>
             </div>
 

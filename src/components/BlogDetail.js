@@ -4,29 +4,30 @@ import { gql } from "apollo-boost";
 import { useQuery } from "@apollo/client";
 
 const GET_BLOG_DETAIL = gql`
-  query blogDetail($id: String!){
+  query blogDetail($id: Int!){
     blogDetail(id: $id)
   }
 `;
 
-function BlogDetail() {
-  const { data, loading } = useQuery(GET_BLOG_DETAIL);
+function BlogDetail(props) {
+  const { data, loading } = useQuery(GET_BLOG_DETAIL, { variables: {id: Number(props.match.params.id)} });
+  
   if (loading) return <div>loading..</div>;
-  return (
+  console.log(data)
+  return (  
     <div className="blog_detail_container">
       <div>
         <img
           className="blog_detail_img"
-          src="https://www.komar.de/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/S/H/SHX8-087_1568286487.jpg"
+          src={data.blogDetail.image}
         />
       </div>
       <div>
-        <h2>Why democracy is hacked</h2>
+        <h2>{data.blogDetail.title}</h2>
 
         <div>
           <p>
-            The secret to happiness The secret to happiness The secret to The
-            secret to happiness The secret to happiness happiness
+            {data.blogDetail.description}
           </p>
         </div>
       </div>

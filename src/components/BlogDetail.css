@@ -4,6 +4,7 @@
 }
 
 .blog_detail_img {
-  height: 500px;
+  height: auto;
   width: 100%;
+  object-fit: cover
 }
