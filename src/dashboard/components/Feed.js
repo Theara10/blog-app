@@ -1,4 +1,5 @@
 import React from "react";
+import Content from "./Content";
 import "./Feed.css";
 
 function Feed() {
@@ -18,25 +19,24 @@ function Feed() {
           <tr>
             <td>1</td>
             <td>
-              <div className="table_title">
-                <div>
-                  <img
-                    src="https://miro.medium.com/max/3840/1*m0WhaDKwpzt6fqsOOcCPig.jpeg"
-                    width="50"
-                    height="50"
-                  />
-                </div>
-                <div>
-                  <h4>This is title</h4>
-                  <p>this is subtitle</p>
-                </div>
-              </div>
+              <Content />
             </td>
             <td>Theara</td>
+            <td></td>
+            <td style={{ display: "flex" }}>
+              <div style={{ marginRight: 10 }}>
+                <p>Edit</p>
+              </div>
+              <div>
+                <p style={{ color: "red" }}>Delete</p>
+              </div>
+            </td>
           </tr>
           <tr>
             <td>1</td>
-            <td>this is title</td>
+            <td>
+              <Content />
+            </td>
             <td>Theara</td>
           </tr>
         </tbody>

@@ -17,15 +17,3 @@
 .table_content tbody tr {
   border-bottom: 1px solid #dddddd;
 }
-.table_title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* .table_title > img {
-  margin: 0;
-} */
-.table_title > p {
-  padding: 0;
-  margin: 0;
-}

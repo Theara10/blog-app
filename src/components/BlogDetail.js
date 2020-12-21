@@ -1,7 +1,17 @@
 import React from "react";
 import "./BlogDetail.css";
+import { gql } from "apollo-boost";
+import { useQuery } from "@apollo/client";
+
+const GET_BLOG_DETAIL = gql`
+  query blogDetail($id: String!){
+    blogDetail(id: $id)
+  }
+`;
 
 function BlogDetail() {
+  const { data, loading } = useQuery(GET_BLOG_DETAIL);
+  if (loading) return <div>loading..</div>;
   return (
     <div className="blog_detail_container">
       <div>

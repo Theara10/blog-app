@@ -1,12 +1,37 @@
 import React from "react";
 import "./Contact.css";
+import { gql } from "apollo-boost";
+import { useMutation } from "@apollo/client";
+
+// const CREATE_CONTACT = gql`
+//   createContact($data: ContactInputType){
+//     createContact(data: $data)
+//   }
+// `;
 
 function Contact() {
+  let input;
   return (
-    <form className="contact_container">
+    <form
+      className="contact_container"
+      onSubmit={(e) => {
+        e.preventDefault();
+        // createContact({
+        //   variables: {
+        //     name: input.value,
+        //   },
+        // });
+        input.value = "";
+      }}
+    >
       <h1>Send me a message</h1>
       <div className="contact_input">
-        <input placeholder="Name" />
+        <input
+          placeholder="Name"
+          ref={(node) => {
+            input = node;
+          }}
+        />
       </div>
       <div className="contact_input">
         <input placeholder="Email" />

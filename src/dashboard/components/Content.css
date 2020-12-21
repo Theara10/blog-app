@@ -1,0 +1,17 @@
+.content {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+/* .table_title > img {
+    margin: 0;
+  } */
+.content_text {
+  margin-left: 10px;
+}
+.title {
+  margin: 0;
+}
+.sub_title {
+  margin: 0;
+}
