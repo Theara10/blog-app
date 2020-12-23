@@ -17,16 +17,17 @@ function BlogDetail(props) {
   return (  
     <div className="blog_detail_container">
       <div>
+      <h2 className="title">{data.blogDetail.title}</h2>
+
         <img
           className="blog_detail_img"
           src={data.blogDetail.image}
         />
       </div>
       <div>
-        <h2>{data.blogDetail.title}</h2>
-
+       
         <div>
-          <p>
+          <p className="description">
             {data.blogDetail.description}
           </p>
         </div>
