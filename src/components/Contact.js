@@ -4,24 +4,25 @@ import { gql } from "apollo-boost";
 import { useMutation } from "@apollo/client";
 
 // const CREATE_CONTACT = gql`
-//   createContact($data: ContactInputType){
+//   CreateContact($data: ContactInputType){
 //     createContact(data: $data)
 //   }
 // `;
 
 function Contact() {
   let input;
+  // const [createContact, {data}] = useMutation(CREATE_CONTACT)
   return (
     <form
       className="contact_container"
       onSubmit={(e) => {
-        e.preventDefault();
+        // e.preventDefault();
         // createContact({
         //   variables: {
         //     name: input.value,
         //   },
         // });
-        input.value = "";
+        // input.value = "";
       }}
     >
       <h1>Send me a message</h1>

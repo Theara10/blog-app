@@ -5,9 +5,10 @@
 }
 
 .table_content > thead > tr {
-  background-color: cadetblue;
-  color: white;
+  /* background-color: cadetblue; */
+  color: black;
   text-align: left;
+  border-bottom: 1px solid #dddddd;
 }
 
 .table_content th,
