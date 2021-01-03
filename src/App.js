@@ -11,7 +11,7 @@ import Dashboard from "./dashboard/Dashboard";
 function App() {
   return (
     <Router>
-      {/* <div className="App">
+      <div className="App">
         <Navbar />
 
         <div className="app_body">
@@ -23,9 +23,8 @@ function App() {
             <Route path="/contact" component={Contact} />
           </Switch>
         </div>
-        
-      </div> */}
-      <Dashboard />
+      </div>
+      {/* <Dashboard /> */}
     </Router>
   );
 }
