@@ -9,7 +9,7 @@ function Navbar() {
         <div className="navBar_left">
           <h2 style={{ margin: 0 }}>
             <Link to="/" className="link_style">
-              theara
+              Mr.Robot
             </Link>
           </h2>
         </div>

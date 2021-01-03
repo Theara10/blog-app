@@ -23,6 +23,10 @@ function App() {
             <Route path="/contact" component={Contact} />
           </Switch>
         </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 9d492ea4469432a67e898418536246d38f33697d
       </div>
       {/* <Dashboard /> */}
     </Router>
