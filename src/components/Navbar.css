@@ -1,6 +1,7 @@
 .nav {
   box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
   /* background-color: #273c75; */
+  position: sticky;
 }
 
 .navBar {

@@ -21,3 +21,13 @@
   color: white;
   /* border-radius: 5px; */
 }
+
+.modal {
+  flex: 1;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  align-content: center;
+  margin-left: 100px;
+  background-color: green;
+}

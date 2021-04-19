@@ -13,7 +13,7 @@
 
 .table_content th,
 .table_content td {
-  padding: 12px 15px;
+  padding: 12px 50px;
 }
 .table_content tbody tr {
   border-bottom: 1px solid #dddddd;

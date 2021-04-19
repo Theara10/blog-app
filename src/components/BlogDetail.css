@@ -6,18 +6,10 @@
 .blog_detail_img {
   height: auto;
   width: 100%;
-  object-fit: cover
+  object-fit: cover;
 }
 
 .description {
   font-size: 20px;
-  line-height: 35px
-}
-
-.title {
-  font-family: Poppins, sans-serif;
-  /* font-size: 36px; */
-  padding-bottom: 10px;
-  padding-top: 20px;
-  font-weight: 200;
+  line-height: 35px;
 }

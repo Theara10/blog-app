@@ -1,8 +1,18 @@
 import React from "react";
 import Content from "./Content";
 import "./Feed.css";
+import { useQuery } from "@apollo/client";
+import Row from "./Row";
+// import { gql } from "apollo-boost";
+
+// const GET_BLOG = gql`
+//   {
+//     listBlog
+//   }
+// `;
 
 function Feed() {
+  // const { data, loading } = useQuery(GET_BLOG);
   return (
     <div className="feed">
       <table className="table_content">
@@ -16,29 +26,7 @@ function Feed() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>
-              <Content />
-            </td>
-            <td>Theara</td>
-            <td></td>
-            <td style={{ display: "flex" }}>
-              <div style={{ marginRight: 10 }}>
-                <p>Edit</p>
-              </div>
-              <div>
-                <p style={{ color: "red" }}>Delete</p>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>
-              <Content />
-            </td>
-            <td>Theara</td>
-          </tr>
+          <Row />
         </tbody>
       </table>
     </div>
