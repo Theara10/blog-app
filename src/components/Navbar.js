@@ -36,15 +36,15 @@ function Navbar() {
             </p>
           </div>
         </div>
-        {/* <div className="navBar_right">
+        <div className="navBar_right">
           <div className="navBar_right_option">
             <p className="contact">
               <Link to="/contact" className="contact_link_style">
-                Text Me
+                Telegram
               </Link>
             </p>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

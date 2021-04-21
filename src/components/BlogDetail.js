@@ -3,6 +3,8 @@ import "./BlogDetail.css";
 import { gql } from "apollo-boost";
 import { useQuery } from "@apollo/client";
 
+import { CalendarOutlined } from "@ant-design/icons";
+
 const GET_BLOG_DETAIL = gql`
   query blogDetail($id: Int!) {
     blogDetail(id: $id)
@@ -19,8 +21,13 @@ function BlogDetail(props) {
   return (
     <div className="blog_detail_container">
       <div>
-        <h2>{data.blogDetail.title}</h2>
-        <p>Date: 20/03/2021</p>
+        <h2 className="title">{data.blogDetail.title}</h2>
+        <p style={{ paddingBottom: 10 }}>
+          <span style={{ paddingRight: 10 }}>
+            <CalendarOutlined />
+          </span>
+          April 23, 2021
+        </p>
         <img className="blog_detail_img" src={data.blogDetail.image} />
       </div>
       <div>

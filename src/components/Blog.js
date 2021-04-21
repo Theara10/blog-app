@@ -52,7 +52,7 @@ export default function Blog() {
         }
         renderItem={(item) => (
           <List.Item
-            key={item.title}
+            key={item.id}
             actions={[
               <IconText
                 icon={CalendarOutlined}
@@ -68,7 +68,15 @@ export default function Blog() {
             ]}
             extra={<img alt="logo" src={item.image} />}
           >
-            <List.Item.Meta title={<a href={item.href}>{item.title}</a>} />
+            <List.Item.Meta
+              title={
+                <a href={item.href}>
+                  <Link className="link" to={"/blog-detail/" + item.id}>
+                    {item.title}
+                  </Link>
+                </a>
+              }
+            />
             <p>{item.description}</p>
           </List.Item>
         )}

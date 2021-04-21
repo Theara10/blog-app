@@ -1,15 +1,23 @@
 .blog_detail_container {
   width: 60%;
   margin: auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+.title {
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
 }
 
 .blog_detail_img {
-  height: auto;
+  height: 500px;
   width: 100%;
   object-fit: cover;
 }
 
 .description {
-  font-size: 20px;
-  line-height: 35px;
+  font-size: 18px;
+  line-height: 30px;
+  padding-top: 20px;
 }

@@ -1,6 +1,6 @@
 .nav {
   box-shadow: 0 5px 8px -9px rgba(0, 0, 0, 0.75);
-  /* background-color: #273c75; */
+  background-color: #001529;
   position: sticky;
 }
 
@@ -26,16 +26,22 @@
   display: flex;
 }
 
-.navbar_middle_option > p {
+.navbar_middle_option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar_middle_option > a {
   margin: 0;
-  color: black;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
   font-family: "Montserrat", sans-serif;
 }
 
 h2 {
   font-size: 36px;
+  color: white;
 }
 
 .navBar_right_option {
@@ -52,7 +58,7 @@ h2 {
 }
 
 .contact {
-  background-color: black;
+  background-color: #0088cc;
   border-radius: 5px;
   padding: 5px 10px;
   color: white;
@@ -61,7 +67,8 @@ h2 {
 
 .link_style {
   text-decoration: none;
-  color: black;
+  color: white;
+  font-size: 18px;
 }
 .contact_link_style {
   text-decoration: none;
