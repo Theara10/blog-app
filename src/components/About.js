@@ -5,6 +5,7 @@ function About() {
   return (
     <div className="about_container">
       <div>
+        <h1>Hello Hello!!</h1>
         <p className="about_description">
           The secret to happiness The secret to happiness The secret to The
           secret to happiness The secret to happiness happiness. Robot is an

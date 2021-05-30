@@ -8,24 +8,21 @@
 }
 
 .ant-list-item-meta-title > a {
-  font-size: 22px !important;
+  font-size: 26px !important;
 }
 .link {
   text-decoration: none;
   color: black !important;
 }
 
-.ant-list-item-main > p {
-  font-size: 18px;
-  margin-top: 5px;
-  -webkit-line-clamp: 3;
+.description {
+  -webkit-line-clamp: 2;
   text-overflow: ellipsis;
   overflow: hidden;
   -webkit-box-orient: vertical;
   display: -webkit-box;
-  /* line-height: 28px; */
   font-size: 16px;
-  white-space: pre-wrap;
+  padding: 0px !important;
 }
 
 .ant-list-item-extra > img {

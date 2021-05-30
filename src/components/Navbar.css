@@ -3,52 +3,34 @@
   background-color: #001529;
   position: sticky;
 }
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-.navBar {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 60%;
-  z-index: 100;
+
   margin: auto;
-  top: 0;
-  height: 60px;
 }
 
-.navBar_middle {
+.navbar_left {
   display: flex;
-}
-.navBar_middle_option {
-  padding-left: 30px;
+  justify-content: center;
 }
 
-.navBar_right {
-  display: flex;
-}
-
-.navbar_middle_option {
+.navbar_right {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navbar_middle_option > a {
-  margin: 0;
-  font-weight: bold;
-  font-size: 22px;
-  font-family: "Montserrat", sans-serif;
-}
-
 h2 {
   font-size: 36px;
   color: white;
-}
-
-.navBar_right_option {
-  padding-left: 20px;
-}
-.navBar_right_option > {
-  padding-left: 20px;
 }
 
 .login {
@@ -69,6 +51,7 @@ h2 {
   text-decoration: none;
   color: white;
   font-size: 18px;
+  margin-left: 10px;
 }
 .contact_link_style {
   text-decoration: none;

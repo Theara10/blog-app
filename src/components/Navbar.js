@@ -1,49 +1,33 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { Layout, Menu, Breadcrumb } from "antd";
+
+const { Header, Content, Footer } = Layout;
 
 function Navbar() {
   return (
     <div className="nav">
-      <div className="navBar">
-        <div className="navBar_left">
-          <h2 style={{ margin: 0 }}>
-            <Link to="/" className="link_style">
-              Mr.Robot
+      <div className="navbar">
+        <div className="navbar_left">
+          <h1 style={{ margin: 0, fontSize: 30 }}>
+            <Link to="/" className="">
+              TheDarkKnight
             </Link>
-          </h2>
+          </h1>
         </div>
-        <div className="navBar_middle">
-          <div className="navBar_middle_option">
-            <p>
-              <Link to="/blog" className="link_style">
-                Ideas
-              </Link>
-            </p>
-          </div>
-          <div className="navBar_middle_option">
-            <p>
-              <Link to="/about" className="link_style">
-                About Me
-              </Link>
-            </p>
-          </div>
-          <div className="navBar_middle_option">
-            <p>
-              <Link to="/contact" className="link_style">
-                Chat
-              </Link>
-            </p>
-          </div>
-        </div>
-        <div className="navBar_right">
-          <div className="navBar_right_option">
-            <p className="contact">
-              <Link to="/contact" className="contact_link_style">
-                Telegram
-              </Link>
-            </p>
-          </div>
+        <div className="navbar_right">
+          <p className="link_style">
+            <Link to="/" className="link_style">
+              Ideas
+            </Link>
+          </p>
+
+          <p className="link_style">
+            <Link to="/about" className="link_style">
+              About Me
+            </Link>
+          </p>
         </div>
       </div>
     </div>

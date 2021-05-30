@@ -6,7 +6,6 @@ import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Dashboard from "./dashboard/Dashboard";
 
 function App() {
   return (

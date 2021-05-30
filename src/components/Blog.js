@@ -9,6 +9,7 @@ import { useQuery } from "@apollo/client";
 
 import { List, Avatar, Space } from "antd";
 import { CalendarOutlined, TagOutlined } from "@ant-design/icons";
+import moment from "moment";
 
 const GET_BLOG = gql`
   {
@@ -41,6 +42,9 @@ export default function Blog() {
   console.log(data);
   return (
     <div className="blog_container">
+      <p style={{ fontWeight: "bold", fontSize: 18, textAlign: "center" }}>
+        Posts
+      </p>
       <List
         itemLayout="vertical"
         size="large"
@@ -56,7 +60,7 @@ export default function Blog() {
             actions={[
               <IconText
                 icon={CalendarOutlined}
-                text="April 20"
+                text={moment(item.created_at).format("MMM Do,  YYYY")}
                 key="list-vertical-star-o"
               />,
 
@@ -66,7 +70,7 @@ export default function Blog() {
                 key="list-vertical-message"
               />,
             ]}
-            extra={<img alt="logo" src={item.image} />}
+            // extra={<img alt="logo" src={item.image} />}
           >
             <List.Item.Meta
               title={
@@ -77,7 +81,7 @@ export default function Blog() {
                 </a>
               }
             />
-            <p>{item.description}</p>
+            <p className="description">{item.description}</p>
           </List.Item>
         )}
       />

@@ -2,6 +2,7 @@
   width: 60%;
   margin: auto;
   display: flex;
+  padding-top: 20px;
 }
 
 .about_image > img {
@@ -14,5 +15,5 @@
   margin-top: 0;
   margin-right: 10px;
   font-size: 20px;
-  line-height: 35px
+  line-height: 35px;
 }
