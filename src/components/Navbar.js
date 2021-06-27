@@ -3,34 +3,26 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { Layout, Menu, Breadcrumb } from "antd";
 
-const { Header, Content, Footer } = Layout;
+const { SubMenu } = Menu;
+const { Header, Content, Sider } = Layout;
 
 function Navbar() {
   return (
-    <div className="nav">
-      <div className="navbar">
-        <div className="navbar_left">
-          <h1 style={{ margin: 0, fontSize: 30 }}>
-            <Link to="/" className="">
-              TheDarkKnight
-            </Link>
-          </h1>
-        </div>
-        <div className="navbar_right">
-          <p className="link_style">
-            <Link to="/" className="link_style">
-              Ideas
-            </Link>
-          </p>
-
-          <p className="link_style">
-            <Link to="/about" className="link_style">
-              About Me
-            </Link>
-          </p>
-        </div>
-      </div>
-    </div>
+    <Header className="header">
+      <Menu theme="dark" mode="horizontal">
+        <Menu.Item key="1">
+          <Link to="/">
+            <div className="logo">/ $ cd /home/</div>
+          </Link>
+        </Menu.Item>
+        <Menu.Item key="1" className="about">
+          About
+        </Menu.Item>
+        <Menu.Item key="2" className="post">
+          <Link to="/post">Post</Link>
+        </Menu.Item>
+      </Menu>
+    </Header>
   );
 }
 

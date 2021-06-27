@@ -11,7 +11,7 @@ const CREATE_BLOG = gql`
   }
 `;
 
-function AddBlog() {
+function Editor() {
   const [createBlog] = useMutation(CREATE_BLOG, {});
   const [input, SetInput] = useState("");
   const [title, setTitle] = useState("");
@@ -57,4 +57,4 @@ function AddBlog() {
   );
 }
 
-export default AddBlog;
+export default Editor;

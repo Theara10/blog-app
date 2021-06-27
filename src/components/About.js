@@ -1,26 +1,58 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./About.css";
+import { Tabs, Button } from "antd";
+import { map } from "cheerio/lib/api/traversing";
+
+const { TabPane } = Tabs;
+
+function callback(key) {
+  console.log(key);
+}
+
+const handleTab = () => {
+  const data = [{ content: "content 1", tab: "tab 1" }];
+  data.push({ content: "content 1", tab: "tab 1" });
+  data.push({ content: "content 2", tab: "tab 2" });
+  console.log(data);
+
+  localStorage.setItem("tab", JSON.stringify(data));
+};
 
 function About() {
+  const [tab, setTab] = useState("");
+  const [item, setItem] = useState("");
+
+  useEffect(() => {
+    const result = localStorage.getItem("tab");
+    console.log(result);
+    setItem(JSON.parse(result));
+  });
+
+  console.log(item);
+
   return (
     <div className="about_container">
-      <div>
-        <h1>Hello Hello!!</h1>
-        <p className="about_description">
-          The secret to happiness The secret to happiness The secret to The
-          secret to happiness The secret to happiness happiness. Robot is an
-          American drama thriller television series created by Sam Esmail for
-          USA Network. It stars Rami Malek as Elliot Alderson, a cybersecurity
-          engineer and hacker with social anxiety disorder and clinical
-          depression. Elliot is recruited by an insurrectionary anarchist known
-          as
-        </p>
-      </div>
-      <div className="about_image">
-        <img src="https://media1.popsugar-assets.com/files/thumbor/_OyVl3a2RkYIUSskCrHSFxaaK1E/499x14:3820x3335/fit-in/550x550/filters:format_auto-!!-:strip_icc-!!-/2019/12/26/885/n/1922283/5f3071555e0514f12ab687.99426050_/i/how-does-mr-robot-end.jpg" />
+      <Tabs defaultActiveKey="1" onChange={callback}>
+        {item.map((x, i) => {
+          return (
+            <TabPane tab={x.tab} key={i}>
+              {x.content}
+            </TabPane>
+          );
+        })}
+      </Tabs>
+      <div style={{ paddingTop: 50 }}>
+        <Button onClick={handleTab} type="primary">
+          New
+        </Button>
       </div>
     </div>
   );
 }
 
 export default About;
+
+// create array of tab
+// set array to local storage
+// when click push more tab object to array
+// get tab data from local storage then display it

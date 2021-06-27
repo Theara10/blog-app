@@ -13,6 +13,7 @@ import {
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import Blog from "./components/Blog";
+import Editor from "./components/Editor";
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
@@ -66,6 +67,7 @@ function App() {
                 <Switch>
                   <Route path="/" component={Blog} exact />
                   <Route path="/add" component={AddBlog} exact />
+                  <Route path="/editor" component={Editor} exact />
                 </Switch>
               </div>
             </Content>
