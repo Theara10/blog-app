@@ -21,10 +21,9 @@
 
 .nav-links {
   list-style: none;
+  font-weight: bold;
 }
-Link {
-  color: #a9a9b3;
-}
+
 .link-style {
   color: #a9a9b3;
 }
@@ -44,6 +43,13 @@ Link {
 @media screen and (max-width: 1024px) {
 }
 @media screen and (max-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
   .nav-menu {
     display: none;
   }
@@ -59,10 +65,12 @@ Link {
     flex-direction: column;
     justify-content: space-around;
     color: #a9a9b3;
+    left: 0px;
   }
 
   .nav-links {
     text-align: center;
+    font-weight: bolder !important;
   }
 
   .burger {
