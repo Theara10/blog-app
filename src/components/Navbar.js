@@ -1,28 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { Layout, Menu, Breadcrumb } from "antd";
-
-const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
 
 function Navbar() {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    setClicked(true);
+  };
+
+  const handleReturn = () => {
+    setClicked(false);
+  };
+
   return (
-    <Header className="header">
-      <Menu theme="dark" mode="horizontal">
-        <Menu.Item key="1">
-          <Link to="/">
-            <div className="logo">/ $ cd /home/</div>
-          </Link>
-        </Menu.Item>
-        <Menu.Item key="1" className="about">
-          About
-        </Menu.Item>
-        <Menu.Item key="2" className="post">
-          <Link to="/post">Post</Link>
-        </Menu.Item>
-      </Menu>
-    </Header>
+    <nav className="nav">
+      <div>
+        <h4 className="logo">Hello</h4>
+      </div>
+
+      <ul className={clicked ? "nav-menu-active" : "nav-menu"}>
+        <Link to="/about" className="link-style">
+          <li className="nav-links">About</li>
+        </Link>
+        <Link to="/post" className="link-style">
+          <li className="nav-links">Post</li>
+        </Link>
+      </ul>
+
+      {clicked ? (
+        <div onClick={handleReturn}>
+          <h2>X</h2>
+        </div>
+      ) : (
+        <div className="burger" onClick={handleClick}>
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <div className="line3"></div>
+        </div>
+      )}
+    </nav>
   );
 }
 

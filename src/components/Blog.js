@@ -19,7 +19,7 @@ function Blog() {
     <>
       <div className="blog-container">
         <h2>Hello friend.</h2>
-        <div style={{ width: 600, textAlign: "center" }}>
+        <div className="home-intro">
           <p className="me">
             This is my attempt to put some ideas and thoughts into writing. The
             purpose of this is just to 1). Practise my programming by building

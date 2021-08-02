@@ -1,19 +1,14 @@
-.about_container {
-  width: 60%;
+.aboutme {
+  width: 55%;
   margin: auto;
-  /* display: flex; */
-  padding-top: 20px;
 }
 
-.about_image > img {
-  margin-top: 10px;
-  width: 300px;
-  height: 300px;
+.about-header {
+  font-size: 36px;
+  margin-top: 80px;
+  font-weight: bolder;
 }
 
-.about_description {
-  margin-top: 0;
-  margin-right: 10px;
-  font-size: 20px;
-  line-height: 35px;
+.about-description {
+  font-size: 16px;
 }
