@@ -1,6 +1,7 @@
 .aboutme {
-  width: 80%;
+  width: 58%;
   margin: auto;
+  padding-bottom: 100px;
 }
 
 .about-header {
@@ -11,4 +12,10 @@
 
 .about-description {
   font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutme {
+    width: 80%;
+  }
 }

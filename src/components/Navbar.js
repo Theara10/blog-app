@@ -19,10 +19,14 @@ function Navbar() {
 
       <ul className={clicked ? "nav-menu-active" : "nav-menu"}>
         <Link to="/about" className="link-style">
-          <li className="nav-links">About</li>
+          <li className="nav-links" onClick={() => setClicked(false)}>
+            About
+          </li>
         </Link>
         <Link to="/post" className="link-style">
-          <li className="nav-links">Post</li>
+          <li className="nav-links" onClick={() => setClicked(false)}>
+            Post
+          </li>
         </Link>
       </ul>
 
