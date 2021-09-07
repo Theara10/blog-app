@@ -8,6 +8,7 @@
 
 .logo {
   font-size: 20px;
+  font-weight: bold;
   margin-bottom: 0px !important;
 }
 
@@ -57,7 +58,7 @@
     position: absolute;
     top: 70px;
     width: 100%;
-    height: 30%;
+    height: 20%;
     background-color: rgb(22, 21, 21);
     opacity: 1;
     transition: all 0.5s ease;
@@ -66,6 +67,9 @@
     justify-content: space-around;
     color: #a9a9b3;
     left: 0px;
+    align-items: center;
+    margin: 0px !important;
+    padding: 0px !important;
   }
 
   .nav-links {

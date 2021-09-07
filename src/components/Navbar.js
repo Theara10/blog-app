@@ -15,7 +15,9 @@ function Navbar() {
 
   return (
     <nav className="nav">
-      <h4 className="logo">Hello</h4>
+      <Link to="/" className="link-style">
+        <h4 className="logo">Home</h4>
+      </Link>
 
       <ul className={clicked ? "nav-menu-active" : "nav-menu"}>
         <Link to="/about" className="link-style">
