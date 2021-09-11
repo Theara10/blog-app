@@ -31,7 +31,7 @@ function Post() {
                     <p>{x.title}</p>
                   </Link>
                   <p className="post-date">
-                    {moment(x.created_at).format("MMM Do YY")}{" "}
+                    {moment(x.created_at).format("MMM Do ")}{" "}
                   </p>
                 </div>
               </div>
