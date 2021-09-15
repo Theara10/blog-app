@@ -9,7 +9,13 @@ import Footer from "./Footer";
 
 const GET_BLOG = gql`
   {
-    listBlog
+    listBlog {
+      title
+      id
+      description
+      created_at
+      status
+    }
   }
 `;
 

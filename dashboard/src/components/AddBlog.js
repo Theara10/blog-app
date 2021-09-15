@@ -4,6 +4,7 @@ import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { useQuery, gql, useMutation } from "@apollo/client";
 import { Button } from "antd";
 import { Form, Input } from "antd";
+import { useHistory } from "react-router-dom";
 
 const CREATE_BLOG = gql`
   mutation createBlog($data: BlogInput) {
@@ -11,8 +12,28 @@ const CREATE_BLOG = gql`
   }
 `;
 
+const BLOGS = gql`
+  {
+    listBlog {
+      title
+      id
+      description
+      created_at
+      status
+    }
+  }
+`;
+
 function AddBlog() {
-  const [createBlog] = useMutation(CREATE_BLOG, {});
+  const { push } = useHistory();
+  const [createBlog] = useMutation(CREATE_BLOG, {
+    onCompleted: (res) => {
+      if (res.createBlog) {
+        push("./");
+      }
+    },
+    refetchQueries: [{ query: "listBlog" }],
+  });
   const [input, SetInput] = useState("");
   const [title, setTitle] = useState("");
 
@@ -25,6 +46,7 @@ function AddBlog() {
           description: input,
         },
       },
+      refetchQueries: ["listBlog"],
     });
   };
 
